@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+ <div class="container">
+    <h1>🍈 Mis Frutas 🍈</h1>
+
+    <!-- Formulario para agregar nuevas frutas -->
+    <form id="form-fruta" class="form-producto">
+      <div class="input-group">
+        <p for="fruta">Fruta:</p>
+        <input type="text" id="fruta" placeholder="Ej: Plátano" required>
+      </div>
+
+      <div class="input-group">
+        <p for="precio">Precio ($):</p>
+        <input type="number" id="precio" placeholder="Ej: 1500" required>
+      </div>
+
+      <div class="input-group">
+        <p for="calidad">Calidad:</p>
+        <select id="calidad" required>
+          <option value="Excelente">Excelente</option>
+          <option value="Buena">Buena</option>
+          <option value="Regular">Regular</option>
+        </select>
+      </div>
+
+      <button type="submit" id="btn-agregar">+ Agregar Fruta</button>
+    </form>
+
+    <!-- Barra de búsqueda interactiva (Filtro por teclado) -->
+    <div class="search-box">
+      <input type="text" id="input-buscar" placeholder="Buscar fruta en el catálogo...">
+    </div>
+
+    <!-- Indicadores de Valor Total (Reemplaza los cálculos de consola) -->
+    <div class="resumen-inventario">
+      <p>Variedades evaluadas: <span id="total-variedades">0</span></p>
+      <p>Valor total del inventario: <strong id="valor-total">$0</strong></p>
+    </div>
+
+    <!-- Mensaje de feedback visual para el usuario -->
+    <div id="feedback" class="feedback hidden"></div>
+
+    <!-- Contenedor dinámico de frutas -->
+    <div id="contenedor-frutas" class="lista-productos"></div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
